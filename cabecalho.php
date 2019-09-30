@@ -1,3 +1,9 @@
+<?php
+
+	$recepcao = "Bem vindo, ".strtoupper($_SESSION['nome'])."!";
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +16,16 @@
 		<figure class="logo">
 			<h1>WA Sistemas</h1>
 		</figure>
+		<div>
+			<?php echo $recepcao; ?>
+		</div>
 		<nav>
 			<ul>
 				<li class="active" data-tag="home">Home</li>
 				<div class="barra"></div>
 				<li data-tag="cadastros">Cadastros</li>
 				<div class="barra"></div>
+				<li><a href="sair.php">Sair</a></li>
 			</ul>
 		</nav>
 		</div>

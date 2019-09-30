@@ -1,3 +1,10 @@
+<?php
+
+	require "sessao.php";
+	require "conexao.php";
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

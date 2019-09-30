@@ -1,0 +1,43 @@
+body{
+	margin: 0px;
+	background-color: #777;
+}
+.logo{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.logo img{
+	width: 150px;
+}
+.logo h1{
+	font-size: 40px;
+	margin-top: 0px;
+}
+form{
+	width: 400px;
+	height: 500px;
+	background-color: #eee;
+	border-radius: 10px;
+	position: absolute;
+	margin-left: -200px;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+}
+.linha{
+	width: 100%;
+}
+.linha div{
+	width: 300px;
+	margin: auto;
+}
+.linha div input{
+
+}
+.botoes{
+	margin-top: 10px;
+}
+.retorno{
+	color: #ff0000;
+}
