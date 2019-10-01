@@ -1,4 +1,6 @@
 <h1>Inicio do repositório</h1>
 
-<h4>Projeto desenvolvido para praticar o desenvolvimento de um sistema comercial</h4>
+<h3>Projeto desenvolvido para praticar o desenvolvimento de um sistema comercial</h3>
+
+<p>Sistema possui cadastro de produto, cliente e fornecedor.</p>
 
