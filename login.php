@@ -2,7 +2,7 @@
 
 	session_start();
 	require "conexao.php";
-	$retorno = '';
+	$retorno = "";
 
 	if((isset($_POST['nome']) && !empty($_POST['nome'])) && (isset($_POST['senha']) && !empty($_POST['senha']))){
 		$nome = addslashes($_POST['nome']);
@@ -20,7 +20,11 @@
 			$_SESSION['nome'] = $usuarios['NOME'];
 			header("Location: index.php");
 		}else{
-			$retorno = "Usuário ou senha inválida!"; 
+			$retorno = "<div class='retorno alert alert-danger alert-dismissible' role='alert'>Usuário ou senha inválida!
+			<button class='close' data-dismiss='alert' aria-label='Fechar'>
+				<span id='fecharAviso' aria-hidden='true'>&times;</span>
+			</button>
+		</div>"; 
 		}
 	}
 
@@ -31,6 +35,7 @@
 <head>
 	<meta charset="utf-8" content="width=device-width, user-scalable=no">
 	<title>WA Sistemas | Login</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 </head>
 <body>
@@ -39,26 +44,28 @@
 			<img src="assets/img/logo.png">
 			<h1>WA Sistemas</h1>
 		</div>
-		<div class="linha linha1">
-			<div>
-				<span>Usuário:</span>
-			</div>
-			<div>
-				<input type="text" name="nome" autofocus required>
+		<div class="row linha linha1">
+			<div class="col">
+				<input class="form-control" type="text" name="nome" id="nome" autofocus required placeholder="Usuário">
 			</div>
 		</div>
-		<div class="linha linha2">
-			<div>
-				<span>Senha:</span>
-			</div>
-			<div>
-				<input type="password" name="senha" required>
+		<div class="row linha linha2">
+			<div class="col">
+				<input class="form-control" type="password" name="senha" required placeholder="Senha">
 			</div>
 		</div>
-		<div class="linha botoes">
-			<div><input type="submit" value="Entrar"></div>
+		<div class="row linha botoes">
+			<div class="col">
+				<input class="form-control btn btn-primary" type="submit" value="Entrar">
+			</div>
 		</div>
-		<div class="retorno"><?php echo $retorno; ?></div>
+
+		<?php echo $retorno; ?>
+			
 	</form>
+
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/login.js"></script>
 </body>
 </html>
