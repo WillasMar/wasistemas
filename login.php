@@ -42,7 +42,6 @@
 	<form method="POST">
 		<div class="logo">
 			<img src="assets/img/logo.png">
-			<h1>WA Sistemas</h1>
 		</div>
 		<div class="row linha linha1">
 			<div class="col">

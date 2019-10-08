@@ -8,7 +8,7 @@ body{
 	margin-top: 20px;
 }
 .logo img{
-	width: 150px;
+	width: 200px;
 }
 .logo h1{
 	font-size: 40px;
@@ -32,6 +32,12 @@ form{
 
 .linha1{
 	margin-top: 50px;
+}
+#nome{
+	text-transform: uppercase;
+}
+#nome::placeholder{
+	text-transform: none;
 }
 .linha1:focus input{
 	color: red;
