@@ -18,6 +18,7 @@
 			$usuarios = $sql->fetch();
 			$_SESSION['usuario'] = $usuarios['USUARIO'];
 			$_SESSION['nome'] = $usuarios['NOME'];
+			$_SESSION['IMG'] = $usuarios['IMG'];
 			header("Location: index.php");
 		}else{
 			$retorno = "<div class='retorno alert alert-danger alert-dismissible' role='alert'>Usuário ou senha inválida!

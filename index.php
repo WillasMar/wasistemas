@@ -15,7 +15,7 @@
 <body>
 	<?php require "cabecalho.php";?>
 
-	<div class="corpo">
+	<div class="corpo container-fluid">
 		
 	</div>
 
