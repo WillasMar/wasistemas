@@ -53,3 +53,60 @@ header nav ul .barra{
 	height: 30px;
 	background-color: #999;
 }
+header .recepcao{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .recepcao .usuarioInt{
+    padding: 5px;
+    border-radius: 2px;
+}
+header .recepcao .usuarioInt:hover{
+    box-shadow: 0px 0px 3px #ccc,0px 0px 3px #ccc;
+    cursor: pointer;
+}
+header .recepcao .usuarioInt .usuarioIntItens{
+    display: flex;
+    align-items: center;
+}
+header .recepcao .usuarioInt .img{
+    width: 50px;
+    height: 50px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: #fff;
+    font-size: 25px;
+}
+header .recepcao .usuarioInt .nome{
+    margin-left: 10px;
+}
+header .recepcao .usuarioInt .tgConfig::after{
+    content: "";
+    position: relative;
+    top: 8px;
+    margin-left: 10px;
+    width: 0px;
+    height: 0px;
+    clear: both;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(0, 0, 0);
+}
+header .recepcao .usuarioInt #tgMenu{
+    display: none;
+}
+header .recepcao .usuarioInt .tgMenu{
+    min-width: 200px;
+    min-height: 200px;
+    box-shadow: 0px 0px 3px #000;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -5px;    
+}
+header .recepcao .sair{
+    margin-left: 20px;
+}

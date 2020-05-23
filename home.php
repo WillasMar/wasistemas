@@ -1,6 +1,6 @@
 <?php
 	
-	//require "sessao.php";
+	require "sessao.php";
 
 ?>
 

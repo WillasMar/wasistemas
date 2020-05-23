@@ -1,3 +1,4 @@
 $(function(){
-	$('.corpo').load('home.php');
+	$('header').load('cabecalho.php')
+	$('.corpo').load('home.php')
 });

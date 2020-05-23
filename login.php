@@ -16,9 +16,9 @@
 
 		if($sql->rowCount() > 0){
 			$usuarios = $sql->fetch();
-			$_SESSION['usuario'] = $usuarios['USUARIO'];
-			$_SESSION['nome'] = $usuarios['NOME'];
-			$_SESSION['IMG'] = $usuarios['IMG'];
+			$_SESSION['usuario'] = $usuarios['id'];
+			$_SESSION['nome'] = $usuarios['nome'];
+			$_SESSION['img'] = $usuarios['img'];
 			header("Location: index.php");
 		}else{
 			$retorno = "<div class='retorno alert alert-danger alert-dismissible' role='alert'>Usuário ou senha inválida!

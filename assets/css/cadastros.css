@@ -4,7 +4,7 @@ body{
 }
 .cadastros .cabecalho div{
 	height: 50px;
-	background-color: #FF4500;
+	background-color: #FFA500;
 	color: #272727;
 	line-height: 50px;
 	text-align: center;
@@ -47,4 +47,10 @@ body{
 }
 .ativo{
 	background-color: #FF4500;
+}
+
+/* tabela de cadastros */
+.cadastros .conteudo #tabelaCadastros tbody tr td{
+	font-size: 30px;
+    text-transform: uppercase;
 }

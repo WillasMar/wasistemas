@@ -1,10 +1,12 @@
 <?php
 
-	//require "sessao.php";
+	require "sessao.php";
 	require "conexao.php";
+	require "assets/class/cliente.class.php";
 
-	$sql = "select * from CLIENTES";
-	$sql = $pdo->query($sql);
+	$clientes = new Cliente($pdo);
+
+	$clientesList = $clientes->select();
 
 ?>
 
@@ -12,7 +14,6 @@
 <html>
 <head>
 	<meta charset="utf-8" id="viewport" name="viewport" content="width=device-width, user-scalable=no">
-	<title>WA Sistema | Cadastro Cliente</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/cadastros.css">
 </head>
@@ -52,10 +53,9 @@
 							usuario
 						</div>
 					</li>
-				</a>
-			
+				</a>			
 			</ul>
-			<table class="table col table-hover">
+			<table class="table col table-hover" id="tabelaCadastros">
 				<thead class="thead-light">
 					<tr>
 						<th>Cod</th>
@@ -66,13 +66,13 @@
 				</thead>
 				<tbody>
 					<?php
-						if($sql->rowCount() > 0){
-							foreach ($sql->fetchAll() as $clientes): ?>
+						if($clientesList != false){
+							foreach ($clientesList as $clientesItem): ?>
 								<tr>
-									<td><?php echo $clientes['CLIENTE']; ?></td>
-									<td><?php echo $clientes['NOME']; ?></td>
-									<td><?php echo $clientes['RAZAO_SOCIAL']; ?></td>
-									<td><?php echo $clientes['CPF']; ?></td>
+									<td><?php echo str_pad($clientesItem['id'],6,'0',STR_PAD_LEFT); ?></td>
+									<td><?php echo $clientesItem['nome']; ?></td>
+									<td><?php echo $clientesItem['razao']; ?></td>
+									<td><?php echo $clientesItem['cpf']; ?></td>
 								</tr>						
 							<?php endforeach; 
 						} 

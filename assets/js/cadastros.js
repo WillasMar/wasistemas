@@ -7,6 +7,6 @@ $(function(){
     });
 
     $('.cadastros .conteudo ul a').bind('click',function(){
-    	return false;
-    });
+    	//return false;
+	});
 });
